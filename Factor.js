@@ -32,6 +32,7 @@ function fac(g, d) {
    var s3 = c/d;
    var s4 = gf2/d;
    var set1 = "(" + s1 + "x" + s2 + ")(" + s3 + "x" + s4 + ")";
+   console.log(set1);
 }
 function gcf(h, i) {
     if ( ! i) {
