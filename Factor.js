@@ -26,7 +26,13 @@ for(var f1 = 1; f1 <= total; f1++) {
 
 }
 
-
+function fac(g, d) {
+   var s1 = a/g;
+   var s2 = gf1/g;
+   var s3 = c/d;
+   var s4 = gf2/d;
+   var set1 = "(" + s1 + "x" + s2 + ")(" + s3 + "x" + s4 + ")";
+}
 function gcf(h, i) {
     if ( ! i) {
         return h;
