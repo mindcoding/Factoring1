@@ -1,6 +1,6 @@
-var a = 2;
-var b = -3;
-var c = 3;
+var a = 1;
+var b = 5;
+var c = 4;
 
 console.log(a + "x^2 + " + b + "x + " + "c");
 
@@ -24,8 +24,9 @@ for(; f1 <= total; f1++) {
 
             gf1 = f1;
             gf2 = f2;
-            gcf1 = gcf(a, f1);
+            gcf1 = gcf(f1, a);
             gcf2 = gcf(f2, c);
+			console.log(gcf1 + " " + gcf2)
 			fac(gcf1, gcf2);
          }
       }
@@ -35,11 +36,11 @@ for(; f1 <= total; f1++) {
 
 function fac(g, d) {
    var s1 = a/g;
-   var s2 = gf1/g;
+   var s2 = gf1;
    var s3 = c/d;
    var s4 = gf2/d;
    console.log(s1 + " " + s2 + " " + s3 + " " + s4)
-   var set1 = "(" + s1 + "x" + "+" + s2 + ")(" + s3 + "x" + "+" + s4 + ")";
+   var set1 = "(" + s1 + "x" + "+" + s2 + ")(" + gcf1 + "x" + "+" + gcf2 + ")";
    console.log(set1);
 }
 function gcf(h, i) {
@@ -48,4 +49,5 @@ function gcf(h, i) {
     }
 
     return gcf(i, h % i);
+	
 };
