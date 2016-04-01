@@ -11,14 +11,14 @@ var gf2;
 var gcf1;
 var gcf2;
 var f1 = 2;
-
-console.log(total)
+console.log("Solving")
 //Positive
 for(; f1 <= total; f1++) {
 	if (total % f1 === 0) {
 		f2 = total / f1;
 		if(f1 + f2 == b) {
 			if(f1*f2 == total) {
+				console.log("Factors Found")
 				gf1 = f1;
 				gf2 = f2;
 				gcf1 = gcf(f1, a);
@@ -39,6 +39,7 @@ for(; f1n >= total; f1n++) {
 		f2n = total / f1n;
 		if(f1n + f2n == b) {
 			if(f1n*f2n == total) {
+				console.log("Factors Found")
 				gf1n = f1n;
 				gf2n = f2n;
 				gcf1n = gcf(f1n, a);
@@ -50,22 +51,22 @@ for(; f1n >= total; f1n++) {
 }
 
 function fac(g, d) {
+	console.log("Solved")
 	var s1 = a/g;
 	var s2 = gf1;
 	var s3 = c/d;
 	var s4 = gf2/d;
-	console.log(s1 + " " + s2 + " " + s3 + " " + s4)
 	 var set1 = "(" + s1 + "x" + "+" + s2 + ")(" + gcf1 + "x" + "+" + gcf2 + ")";
 	console.log(set1);
 }
 function facn(g, d) {
+	console.log("Solved")
 	var s1 = a/g;
 	var s2 = gf1n;
 	var s3 = c/d;
 	var s4 = gf2n;
 	var s21 = Math.abs(s2);
 	var gcf2n1 = Math.abs(gcf2n);
-	console.log(s1 + " " + s21 + " " + s3 + " " + s4)
 	if (s2 < 0) {
 		var set1 = "(" + s1 + "x" + "-" + s21 + ")(" + gcf1n + "x" + "+" + gcf2n1 + ")";
 	}else if (gcf2n < 0) {
@@ -82,7 +83,7 @@ function gcf(h, i) {
     	if ( ! i) {
     		return h;
     	}
+    	console.log("GCD found")
     	return gcf(i, h % i);
-	console.log("H " + i + " " + h)
 	
 };
